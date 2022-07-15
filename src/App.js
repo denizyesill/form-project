@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div className="page_container">
-      deniz yesil
+      
       <div className="form_section">
         <form onSubmit={handleSubmit} className="form_container">
           <legend>
@@ -28,7 +28,7 @@ const App = () => {
           <br />
 
           <label>
-            <h5>Enter your name:</h5>
+            <h5>Ad-Soyad:</h5>
             <input
               type="text"
               name="username"
@@ -38,14 +38,169 @@ const App = () => {
           </label>
 
           <label>
-            <h5>Enter your age: </h5>
+            <h5>T.C. Numarası: </h5>
             <input
               type="number"
-              name="age"
-              value={inputs.age || ""}
+              name="tc"
+              value={inputs.tc || ""}
               onChange={handleChange}
             />
           </label>
+
+          <label>
+            <h5>Doğum Tarihi: </h5>
+            <input
+              type="date"
+              name="birthday"
+              value={inputs.birthday || ""}
+              onChange={handleChange}
+            />
+          </label>
+
+          <label>
+            <h5>Cinsiyet: </h5>
+            <select>
+            <option value="Erkek">Erkek</option>
+            <option value="Kadın">Kadın</option>
+            value={inputs.cinsiyet || ""}
+            onChange={handleChange}
+            </select>
+          </label>
+
+          <label>
+            <h5>Adress:</h5>
+            <input
+            type="text"
+            name="adress"
+            value={inputs.adress || ""}
+            onChange={handleChange}
+            />
+            </label>
+
+        <legend>
+         <h3>İletişim Bilgileri</h3>
+        </legend>
+
+        <label>
+            <h5>Email:</h5>
+            <input
+              type="email"
+              name="mail"
+              value={inputs.mail || ""}
+              onChange={handleChange}
+            />
+          </label>
+
+          <label>
+            <h5>Telefon Numarası: </h5>
+            <input
+              type="number"
+              name="telno"
+              value={inputs.telno || ""}
+              onChange={handleChange}
+            />
+          </label>
+
+        <legend>
+         <h3>Eğitim Bilgileri</h3>
+        </legend>
+
+        <label>
+            <h5>Üniversite:</h5>
+            <input
+            type="text"
+            name="universite"
+            value={inputs.universite || ""}
+            onChange={handleChange}
+            />
+         </label>
+
+         <label>
+            <h5>Bölüm:</h5>
+           <input
+            type="text"
+            name="bolum"
+            value={inputs.bolum || ""}
+            onChange={handleChange}
+            />
+         </label>
+
+        <legend>
+         <h3>Başvuru Yapılan Pozisyon</h3>
+        </legend>
+            
+            <label>
+              <select name="dropbox">
+                <option value="ik">İK</option>
+                <option value="muhendis">ERP Uzmanı</option>
+                value={inputs.pozisyon || ""}
+               onChange={handleChange}
+              </select>
+            </label>
+
+        <legend>
+         <h3>Bilgisayar Bilgisi/Yabancı Dil</h3>
+        </legend>
+       
+        <label>
+            <h5>Yabancı Dil:</h5>
+            <input
+            type="text"
+            name="languages"
+            value={inputs.languages || ""}
+            onChange={handleChange}
+            />
+            </label>
+        
+        <legend>
+         <h3>Tecrübeler</h3>
+        </legend>
+
+        <label>
+            <input
+            type="text"
+            name="tecrube"
+            value={inputs.tecrube || ""}
+            onChange={handleChange}
+            />
+         </label>
+
+        <legend>
+         <h3>Referanslar</h3>
+        </legend>
+
+        <label>
+            <input
+            type="text"
+            name="referans"
+            value={inputs.referans || ""}
+            onChange={handleChange}
+            />
+         </label>
+
+         <legend>
+         <h3>Diğer Bilgiler</h3>
+        </legend>
+
+        <label>
+        <h5>Başarılar/Ödüller:</h5>
+            <input
+            type="text"
+            name="basarı"
+            value={inputs.basarı || ""}
+            onChange={handleChange}
+            />
+         </label>
+
+         <label>
+        <h5>Hobiler:</h5>
+            <input
+            type="text"
+            name="hobi"
+            value={inputs.hobi || ""}
+            onChange={handleChange}
+            />
+         </label>
           
           <button type="submit">submit</button>
         </form>
