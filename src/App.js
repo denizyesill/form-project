@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div className="page_container">
-      deniz
+      deniz yesil
       <div className="form_section">
         <form onSubmit={handleSubmit} className="form_container">
           <legend>
