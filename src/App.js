@@ -1,9 +1,11 @@
 import { useState } from "react";
 
 import "./App.css";
-
+import bitesLogo from './logo.png';
 const App = () => {
   const [inputs, setInputs] = useState({});
+  
+
 
   const handleChange = (event) => {
     console.log(event.target.value);
@@ -20,6 +22,8 @@ const App = () => {
   return (
     <div className="page_container">
       
+      <img src={bitesLogo}  width="272px" height="82px"/>
+
       <div className="form_section">
         <form onSubmit={handleSubmit} className="form_container">
           <legend>
@@ -57,15 +61,19 @@ const App = () => {
             />
           </label>
 
+          
           <label>
-            <h5>Cinsiyet: </h5>
-            <select>
-            <option value="Erkek">Erkek</option>
-            <option value="Kadın">Kadın</option>
-            value={inputs.cinsiyet || ""}
-            onChange={handleChange}
-            </select>
-          </label>
+          <h5>Cinsiyet: </h5>
+              <select 
+              name="cinsiyet"
+              value={inputs.cinsiyet || ""}
+              onChange={handleChange}>
+                <option value="erkek">erkek</option>
+                <option value="kadın">Kadın</option>
+                
+              </select>
+            </label>
+
 
           <label>
             <h5>Adress:</h5>
@@ -130,11 +138,13 @@ const App = () => {
         </legend>
             
             <label>
-              <select name="dropbox">
+              <select 
+              name="pozisyon"
+              value={inputs.pozisyon || ""}
+              onChange={handleChange}>
                 <option value="ik">İK</option>
-                <option value="muhendis">ERP Uzmanı</option>
-                value={inputs.pozisyon || ""}
-               onChange={handleChange}
+                <option value="erpuzmanı">ERP Uzmanı</option>
+                
               </select>
             </label>
 
@@ -142,6 +152,22 @@ const App = () => {
          <h3>Bilgisayar Bilgisi/Yabancı Dil</h3>
         </legend>
        
+       <label>
+       <input type="checkbox" name="phyt"    onChange={handleChange}   value={inputs.phyt || ""} /><h5>phyton</h5><br />
+       <input type="checkbox" name="cbilgisi"    onChange={handleChange}   value={inputs.cbilgisi || ""} /><h5>C</h5><br />
+       <input type="checkbox" name="jsbilgisi"    onChange={handleChange}   value={inputs.jsbilgisi || ""} /><h5>js</h5><br />
+       </label>
+      
+
+       <fieldset>
+    <legend>Please select one of the following</legend>
+    <input type="radio" name="cbilgisi"  onChange={handleChange}  value={inputs.cbilgisi || ""}/><label for="cbilgisi">cbilgisi</label><br />
+    <input type="radio" name="jsbilgisi"   onChange={handleChange}  value={inputs.jsbilgisi || ""} /><label for="jsbilgisi">jsbilgisi</label><br />
+    <input type="radio" name="phybilgisi"   onChange={handleChange}  value={inputs.phybilgisi || ""} /><label for="phybilgisi">phybilgisi</label><br />
+</fieldset>
+
+
+
         <label>
             <h5>Yabancı Dil:</h5>
             <input
