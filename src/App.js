@@ -17,7 +17,7 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
-  };
+   };
 
   return (
     <div className="page_container">
@@ -153,20 +153,12 @@ const App = () => {
         </legend>
        
        <label>
-       <input type="checkbox" name="phyt"    onChange={handleChange}   value={inputs.phyt || ""} /><h5>phyton</h5><br />
-       <input type="checkbox" name="cbilgisi"    onChange={handleChange}   value={inputs.cbilgisi || ""} /><h5>C</h5><br />
-       <input type="checkbox" name="jsbilgisi"    onChange={handleChange}   value={inputs.jsbilgisi || ""} /><h5>js</h5><br />
+       <input type="checkbox" name="phyt"       onChange={handleChange}   value="pyhton" /><h5>phyton</h5><br/>
+       <input type="checkbox" name="cbilgisi"    onChange={handleChange}   value="C" /><h5>C</h5><br/>
+       <input type="checkbox" name="jsbilgisi"    onChange={handleChange}   value="JS" /><h5>js</h5><br/>
+       <input type="checkbox" name="c++bilgisi"    onChange={handleChange}   value="c++" /><h5>C++</h5><br/>
        </label>
       
-
-       <fieldset>
-    <legend>Please select one of the following</legend>
-    <input type="radio" name="cbilgisi"  onChange={handleChange}  value={inputs.cbilgisi || ""}/><label for="cbilgisi">cbilgisi</label><br />
-    <input type="radio" name="jsbilgisi"   onChange={handleChange}  value={inputs.jsbilgisi || ""} /><label for="jsbilgisi">jsbilgisi</label><br />
-    <input type="radio" name="phybilgisi"   onChange={handleChange}  value={inputs.phybilgisi || ""} /><label for="phybilgisi">phybilgisi</label><br />
-</fieldset>
-
-
 
         <label>
             <h5>Yabancı Dil:</h5>
