@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="page_container">
 
-      <form>
+     {/* <form> 
         <div className="form-wrapper">
         <label className="form-label">Başlık</label>
         <input className="form-input" />
@@ -31,8 +31,7 @@ const App = () => {
         <label className="form-label">Başlık</label>
         <input className="form-input" />
         </div>
-
-      </form>
+        </form>  */}
       
       <img src={bitesLogo}  width="272px" height="82px"/>
 
@@ -166,16 +165,22 @@ const App = () => {
        
        <div className="checkbox-wrapper">
         <label className="my-label">Python
-
-       <input type="checkbox" name="phyt"       onChange={handleChange}   value="pyhton" />
+       <input type="checkbox" name="python"       onChange={handleChange}   value="python" />
+        </label>
+           
+        <label className="my-label">Python
+       <input type="checkbox" name="python"       onChange={handleChange}   value="python" />
         </label>
 
-       </div>
-       {/* <input type="checkbox" name="cbilgisi"    onChange={handleChange}   value="C" /><h5>C</h5><br/>
-       <input type="checkbox" name="jsbilgisi"    onChange={handleChange}   value="JS" /><h5>js</h5><br/>
-       <input type="checkbox" name="c++bilgisi"    onChange={handleChange}   value="c++" /><h5>C++</h5><br/> */}
-      
+        <label className="my-label">Python
+       <input type="checkbox" name="python"       onChange={handleChange}   value="python" />
+        </label>
 
+      
+       </div>
+
+
+        {/* <div className="languages"> */}
         <label>
             <h5>Yabancı Dil:</h5>
             <input
@@ -185,6 +190,8 @@ const App = () => {
             onChange={handleChange}
             />
             </label>
+
+        {/* </div> */}
         
         <legend>
          <h3>Tecrübeler</h3>
